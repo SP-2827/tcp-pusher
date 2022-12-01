@@ -19,7 +19,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class TcpClient {
 
     public static final int PRODUCER_COUNT = 2;
-    public static final int CONSUMER_COUNT = 1;
+    public static final int CONSUMER_COUNT = 3;
     public static final int TOTAL_PAYLOAD_SIZE = 100000;
     private final BlockingQueue<String> blockingQueue = new ArrayBlockingQueue<>(1000);
 
@@ -83,8 +83,8 @@ public class TcpClient {
                 while (true) {
 
                     blockingQueue.put(SendSVPData.getXMLAsString());
-                    if (counter.incrementAndGet() % 1000 == 0) {
-                        Thread.sleep(1000);
+                    if (counter.incrementAndGet() % 100 == 0) {
+                        Thread.sleep(5000);
                         System.out.println("Producer current stage at " + counter.get());
                     }
                     if (counter.incrementAndGet() == TOTAL_PAYLOAD_SIZE) {
