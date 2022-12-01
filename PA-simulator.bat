@@ -1,0 +1,1 @@
+"%~dp0JRE\bin\java" -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=3338 -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -jar svp-protocol-simulator-1.1.jar "xml.txt" /IP 10.102.11.117 /REPEAT true /TUNNEL 01,02,03,04,05,06,07,08,09,10 

@@ -1,0 +1,1 @@
+Main-Class: org.sick.tcp.connector.client.SendSVPData
